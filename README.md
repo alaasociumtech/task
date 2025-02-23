@@ -1,4 +1,4 @@
- Clone the Repository:
+'''Clone the Repository:
 git clone https://github.com/alaasociumtech/pytest_task.git
 cd pytest_task
 
@@ -7,7 +7,7 @@ python -m venv venv
 source venv/bin/activate
 
 Install Dependencies:
-pip install -r requirements.txt
+pip install pytest pytest-mock requests
 
 Run the Script:
-python test_task.py 
+python test_task.py'''
