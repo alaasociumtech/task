@@ -1,11 +1,8 @@
 import pytest
 from requests.exceptions import HTTPError
 
-from task import (
-    get_post_by_id,
-    get_posts_by_user_id,
-    get_post_by_id_with_validation
-)
+from task import (get_post_by_id, get_post_by_id_with_validation,
+                  get_posts_by_user_id)
 
 
 def test_get_post_by_id_success(mocker):
