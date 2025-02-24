@@ -16,7 +16,7 @@ def test_get_post_by_id_success(mocker):
 
 
 def test_get_post_by_id_failure(mocker):
-    mocker.patch("task.http_get", side_effect=HTTPError("HTTP Error"))
+    mocker.patch('task.http_get', side_effect=HTTPError('HTTP Error'))
     assert get_post_by_id(1) is None
 
 
@@ -28,7 +28,7 @@ def test_get_posts_by_user_id_success(mocker):
 
 
 def test_get_posts_by_user_id_failure(mocker):
-    mocker.patch("task.http_get", side_effect=HTTPError("HTTP Error"))
+    mocker.patch('task.http_get', side_effect=HTTPError('HTTP Error'))
     assert get_posts_by_user_id(1) is None
 
 
@@ -40,10 +40,10 @@ def test_get_post_by_id_with_validation_succsee(mocker):
 
 
 def test_get_post_by_id_with_validation_failure(mocker):
-    mocker.patch("task.http_get", side_effect=HTTPError("HTTP Error"))
+    mocker.patch('task.http_get', side_effect=HTTPError('HTTP Error'))
     assert get_post_by_id_with_validation(1) is None
 
 
-def test_get_post_by_id_with_validation_invalid_post_id(mocker):
+def test_get_post_by_id_with_validation_invalid_post_id():
     with pytest.raises(ValueError, match='post_id must be greater than 0'):
         get_post_by_id_with_validation(-1)
